@@ -33,7 +33,7 @@ const ProfileSection: React.FC = () => {
   return (
     <section
       id="perfil"
-      className="pt-6 md:pt-8 pb-12 md:pb-14 bg-[#F7F5F0] overflow-hidden relative"
+      className="pt-6 md:pt-8 pb-10 md:pb-12 bg-[#F7F5F0] overflow-hidden relative"
       aria-labelledby="profile-heading"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -66,35 +66,6 @@ const ProfileSection: React.FC = () => {
                 </div>
               </div>
             </div>
-
-            <div className="mt-5 md:mt-6">
-              <div className="flex items-center gap-3 mb-3 md:mb-4">
-                <div className="h-px w-10 bg-[#C6A75E]/50"></div>
-                <h3 className="text-[11px] md:text-xs font-bold text-[#0F1E2E] serif tracking-[0.2em] uppercase whitespace-nowrap">
-                  Campos de conocimiento
-                </h3>
-                <div className="h-px grow bg-[#C6A75E]/25"></div>
-              </div>
-
-              <div className="grid grid-cols-3 gap-2.5 md:gap-3 items-stretch">
-                {EXPERIENCE_AREAS.map((area) => {
-                  const Icon = ICON_MAP[area.icon] ?? Scale;
-                  return (
-                    <div
-                      key={area.id}
-                      className="group flex flex-col items-center justify-center overflow-hidden rounded-xl border border-[#0F1E2E]/10 bg-white p-2.5 md:p-3 text-center shadow-sm transition-all duration-500 hover:-translate-y-0.5 hover:border-[#C6A75E]/60 hover:shadow-[0_16px_32px_-12px_rgba(15,30,46,0.35)]"
-                    >
-                      <div className="mb-1.5 inline-flex h-7 w-7 md:h-8 md:w-8 items-center justify-center rounded-full bg-[#C6A75E]/15 text-[#C6A75E] transition-colors duration-500 group-hover:bg-[#C6A75E] group-hover:text-[#0F1E2E]">
-                        <Icon className="w-3.5 h-3.5 md:w-4 md:h-4" />
-                      </div>
-                      <h4 className="text-[9px] md:text-[10px] font-bold text-[#0F1E2E] serif leading-snug uppercase tracking-tight">
-                        {area.title}
-                      </h4>
-                    </div>
-                  );
-                })}
-              </div>
-            </div>
           </div>
 
           <div className="lg:col-span-3 space-y-5 order-1 lg:order-2">
@@ -104,12 +75,12 @@ const ProfileSection: React.FC = () => {
               </span>
               <h2
                 id="profile-heading"
-                className="text-2xl md:text-3xl font-bold text-[#0F1E2E] mb-5 md:mb-6 serif leading-tight"
+                className="text-2xl md:text-3xl font-bold text-[#0F1E2E] mb-4 md:mb-5 serif leading-tight"
               >
                 Trayectoria orientada a la defensa de los derechos humanos y la protección de las
                 víctimas con enfoque de género.
               </h2>
-              <div className="w-16 h-1 bg-[#C6A75E] mb-6"></div>
+              <div className="w-16 h-1 bg-[#C6A75E] mb-5"></div>
             </div>
 
             <div className="space-y-3 text-[#2D3748] leading-relaxed">
@@ -119,6 +90,36 @@ const ProfileSection: React.FC = () => {
                 </p>
               ))}
             </div>
+          </div>
+        </div>
+
+        <div className="mt-6 md:mt-8 pt-4 md:pt-5 border-t border-[#C6A75E]/25">
+          <div className="flex items-center gap-4 mb-4">
+            <div className="h-px bg-[#C6A75E]/30 grow"></div>
+            <h3 className="text-xs md:text-sm font-bold text-[#0F1E2E] serif tracking-[0.2em] uppercase whitespace-nowrap">
+              Campos de conocimiento
+            </h3>
+            <div className="h-px bg-[#C6A75E]/30 grow"></div>
+          </div>
+
+          <div className="flex flex-row gap-4 overflow-x-auto snap-x snap-mandatory scroll-smooth [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+            {EXPERIENCE_AREAS.map((area) => {
+              const Icon = ICON_MAP[area.icon] ?? Scale;
+              return (
+                <article
+                  key={area.id}
+                  className="group relative flex-1 shrink-0 basis-[200px] min-w-[200px] snap-start rounded-xl border border-[#0F1E2E]/10 bg-white p-5 text-center shadow-sm transition-all duration-500 hover:-translate-y-0.5 hover:border-[#C6A75E]/60 hover:shadow-[0_16px_32px_-12px_rgba(15,30,46,0.35)] overflow-hidden"
+                >
+                  <div className="mx-auto mb-2 inline-flex h-10 w-10 items-center justify-center rounded-full bg-[#C6A75E]/15 text-[#C6A75E] transition-colors duration-500 group-hover:bg-[#C6A75E] group-hover:text-[#0F1E2E]">
+                    <Icon className="w-5 h-5" />
+                  </div>
+                  <h4 className="text-[11px] md:text-xs font-bold text-[#0F1E2E] serif leading-snug uppercase tracking-wide">
+                    {area.title}
+                  </h4>
+                  <div className="absolute bottom-0 left-0 w-full h-0.5 bg-[#C6A75E]/0 transition-colors duration-500 group-hover:bg-[#C6A75E]/60"></div>
+                </article>
+              );
+            })}
           </div>
         </div>
       </div>

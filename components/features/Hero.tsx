@@ -40,9 +40,9 @@ const Hero: React.FC = () => {
 
         <p className="text-xs md:text-base text-[#F7F5F0]/75 mb-6 md:mb-8 max-w-2xl mx-auto font-light leading-relaxed animate-in fade-in slide-in-from-bottom-10 duration-1000 delay-300">
           Abogada de la Universidad Externado de Colombia y especialista en Derecho Constitucional
-          de la Universidad del Rosario, con más de diez años de experiencia en el sector
-          público, enfocada en la protección de los derechos humanos y fundamentales, la atención a
-          víctimas y la promoción de una atención con enfoque de género y diferencial.
+          de la Universidad del Rosario, con más de diez años de experiencia en el sector público,
+          enfocada en la protección de los derechos humanos y fundamentales, la atención a víctimas
+          y la promoción de una atención con enfoque de género y diferencial.
         </p>
 
         <div className="flex items-center justify-center animate-in fade-in slide-in-from-bottom-12 duration-1000 delay-500">
@@ -50,7 +50,7 @@ const Hero: React.FC = () => {
             to="/#perfil"
             className="px-10 py-4 bg-[#C6A75E] text-[#0F1E2E] font-bold rounded-sm hover:bg-[#F7F5F0] transition-all duration-300 tracking-[0.2em] uppercase text-xs shadow-2xl flex items-center gap-3 w-fit"
           >
-            Conocer mi perfil <ArrowRight size={16} className="shrink-0" />
+            Conoce mi perfil <ArrowRight size={16} className="shrink-0" />
           </Link>
         </div>
 

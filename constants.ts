@@ -52,20 +52,6 @@ export const EXPERIENCE_AREAS: ExpertiseArea[] = [
     icon: 'HeartHandshake',
   },
   {
-    id: 'fundamentales',
-    title: 'Derechos fundamentales',
-    description:
-      'Detección y prevención de amenazas en materia de derechos fundamentales – humanos –.',
-    icon: 'ShieldCheck',
-  },
-  {
-    id: 'conflictos',
-    title: 'Mecanismos alternativos de solución de conflictos',
-    description:
-      'Aplicación de mecanismos alternativos de solución de conflictos, especialmente la conciliación.',
-    icon: 'Scale',
-  },
-  {
     id: 'conciliacion',
     title: 'Conciliación',
     description:
