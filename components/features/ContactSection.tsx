@@ -37,7 +37,10 @@ const ContactSection: React.FC = () => {
       className="pt-12 md:pt-16 pb-12 md:pb-16 bg-[#0F1E2E] relative overflow-hidden border-t-4 border-t-[#C6A75E]/30"
       aria-labelledby="contact-heading"
     >
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(198,167,94,0.08),transparent_45%)] pointer-events-none" aria-hidden="true"></div>
+      <div
+        className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(198,167,94,0.08),transparent_45%)] pointer-events-none"
+        aria-hidden="true"
+      ></div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
           <div>
@@ -51,7 +54,7 @@ const ContactSection: React.FC = () => {
               Canal directo de comunicación profesional.
             </h2>
             <p className="text-[#F7F5F0]/60 max-w-lg text-sm md:text-base font-light leading-relaxed mb-8">
-              Escríbame a través de WhatsApp o por correo electrónico para dialogar sobre una
+              Contáctame a través de WhatsApp o por correo electrónico para dialogar sobre una
               posible colaboración o relación laboral.
             </p>
 
